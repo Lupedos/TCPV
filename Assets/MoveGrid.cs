@@ -20,31 +20,34 @@ public class MoveGrid : MonoBehaviour
     void Update()
     {
         
-         for ( int i = 0; i < chaos.Length; i++) 
-         {
-            if (chaos[i].transform.position.x > transform.position.x && chaos[i].transform.position.z == transform.position.z &&  chaos[i] != chaoPisando ) 
-            {
-                 float distancia = Vector3.Distance(transform.position, chaos[i].transform.position);
-
-                   if (distancia < distanciaMaisProxima) 
-                   {
-                     objetoMaisProximo = chaos[i];
-                     distanciaMaisProxima = distancia;
-                     Debug.Log(objetoMaisProximo);
-
-                   }
-
-             titlePos = new Vector3(Mathf.RoundToInt(objetoMaisProximo.transform.position.x),0.6f,Mathf.RoundToInt(objetoMaisProximo.transform.position.z));
-             
-                
-            }
-        }
-        if(Input.GetKeyDown("d"))
+      for ( int i = 0; i < chaos.Length; i++) 
+      {
+        if (chaos[i].transform.position.x > transform.position.x && chaos[i].transform.position.z == transform.position.z &&  chaos[i] != chaoPisando ) 
         {
-           
-          this.transform.position = titlePos;
-          chaoPisando = objetoMaisProximo;
+        float distancia = Vector3.Distance(transform.position, chaos[i].transform.position);
+
+          if (distancia < distanciaMaisProxima) 
+          {
+          objetoMaisProximo = chaos[i];
+          distanciaMaisProxima = distancia;
+          Debug.Log(objetoMaisProximo);
+                  
+          }
+
+          titlePos = new Vector3(Mathf.RoundToInt(objetoMaisProximo.transform.position.x),0.6f,Mathf.RoundToInt(objetoMaisProximo.transform.position.z));
+          
+                
         }
-        
+      }
+       
+         if(Input.GetKeyDown("d"))
+          {
+           
+            this.transform.position = titlePos;
+            chaoPisando = objetoMaisProximo;
+              
+          }
     }
+
+    
 }
