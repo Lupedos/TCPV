@@ -1,0 +1,94 @@
+{
+    "name": "Playercontrole",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "cdd2ef8c-ec46-420e-a1c7-e901d09c7e52",
+            "actions": [
+                {
+                    "name": "Direita",
+                    "type": "Button",
+                    "id": "91c3a26e-e8e2-4caf-931e-c32eba132338",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Esquerda",
+                    "type": "Button",
+                    "id": "21953cca-672f-492e-be4e-2187bf1aa247",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cima",
+                    "type": "Button",
+                    "id": "8d8ca6ed-d132-445d-a120-5494b826c2ed",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Baixo",
+                    "type": "Button",
+                    "id": "14454a52-7e51-4dd2-8f8d-f6b9c28467f0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "815390af-2e00-430b-ab06-78791fcf770a",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Direita",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ded1f28-d83b-4394-865c-a6fdaa2cee4a",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cima",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2e3c2431-dbfb-403b-971c-e040c20efe29",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Baixo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d5fe7faa-8966-4f5c-93e4-a435bc144ef9",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Esquerda",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
