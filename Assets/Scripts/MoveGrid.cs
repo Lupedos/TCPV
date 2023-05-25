@@ -13,16 +13,39 @@ public class MoveGrid : MonoBehaviour
     
     Playercontrole controle;
 
+    public static bool turno;//caso  turno  seja false  vez jogador  se nao  vez dos inimigos
     void Awake()
     {
+      turno = false;//vez do jogador 
       controle = new Playercontrole();
 
-               
-      controle.Gameplay.Direita.performed += ctx => D();//input direita
-      controle.Gameplay.Esquerda.performed += ctx => E();//input esquerda
-      controle.Gameplay.Cima.performed += ctx => C();//input cima
-      controle.Gameplay.Baixo.performed += ctx => B();//input baixo
+      if(turno == false)//faz com que  jogador  so  ande no  seu  turno 
+      {
+        controle.Gameplay.Direita.performed += ctx => D();//input direita
+        controle.Gameplay.Esquerda.performed += ctx => E();//input esquerda
+        controle.Gameplay.Cima.performed += ctx => C();//input cima
+        controle.Gameplay.Baixo.performed += ctx => B();//input baixo
+      }
+      
     } 
+     void Start()
+    {
+        //Codigo  para encontrar  chao  mais proximo
+       GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("chao");
+       chaoPisando = null;
+       float menorDistancia = Mathf.Infinity;
+       Vector3 posicaoAtual = transform.position;
+
+       foreach (GameObject chaoObject in chaoObjects)
+        {
+            float distancia = Vector3.Distance(chaoObject.transform.position, posicaoAtual);
+            if (distancia < menorDistancia)
+            {
+                chaoPisando = chaoObject;
+                menorDistancia = distancia;
+            }
+        }
+    }
     void OnEnable()
     {
       controle.Gameplay.Enable();
@@ -64,12 +87,16 @@ public class MoveGrid : MonoBehaviour
             Vector3 position = new Vector3(Mathf.RoundToInt(chaoPerto.transform.position.x), 0.6f, Mathf.RoundToInt(chaoPerto.transform.position.z));
             transform.position = position;
             chaoPisando = chaoPerto;
+            StartCoroutine(TurnoTime());//timer para jogador ter açao  antes dos monstros;
+            
         }
     }
     void Update()
     {
-        //Debug.Log(Input.GetAxis("Horizontal"));
-        //Debug.Log(Input.GetAxis("Vertical"));
+        if(turno == true)
+        {
+           turno = false;
+        }
         chaoPertoD = null;
         chaoPertoE = null;
         chaoPertoB = null;
@@ -92,5 +119,9 @@ public class MoveGrid : MonoBehaviour
     {
       Moverparachaoperto(chaoPertoB); 
     }
-
+    IEnumerator TurnoTime()
+    {
+      yield return new WaitForSeconds(0.1f);
+      turno = true; 
+    }
 }
