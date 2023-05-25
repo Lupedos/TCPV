@@ -1564,6 +1564,7 @@ MonoBehaviour:
   chaoPertoC: {fileID: 0}
   chaoPertoB: {fileID: 0}
   chaoPisando: {fileID: 0}
+  Apertou: 0
 --- !u!114 &905301060
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class MoverAleatorio : MonoBehaviour
     public GameObject chaoPertoC ;//cima
     public GameObject chaoPertoB ;//baixo
     public GameObject chaoPisando;
+     
 
     public int random; 
 
@@ -40,30 +41,43 @@ public class MoverAleatorio : MonoBehaviour
         chaoPertoC = null;
         encontrarChaoPerto(chaoPisando);
 
+        
+            
+            
+            
+        
+    }
+    void FixedUpdate()
+    {
         if(MoveGrid.turno == true)
         {
             random = Random.Range(1, 5);
             if(random == 1 && chaoPertoD != null)
             {
-              Moverparachaoperto(chaoPertoD); 
+              //Moverparachaoperto(chaoPertoD);
+              StartCoroutine(AndarAleatorio(chaoPertoD)); 
             }
             else if(random == 2 && chaoPertoE != null)
             {
-              Moverparachaoperto(chaoPertoE); 
+              //Moverparachaoperto(chaoPertoE);
+              StartCoroutine(AndarAleatorio(chaoPertoE)); 
             }
             else if(random == 3 && chaoPertoB != null)
             {
-              Moverparachaoperto(chaoPertoB); 
+              //Moverparachaoperto(chaoPertoB);
+              StartCoroutine(AndarAleatorio(chaoPertoB)); 
             }
             else if(random == 4 && chaoPertoC != null)
             {
-              Moverparachaoperto(chaoPertoC); 
+              //Moverparachaoperto(chaoPertoC);
+              StartCoroutine(AndarAleatorio(chaoPertoC)); 
             }
-            else 
-            random = Random.Range(1, 5);
-            return;
-            
         }
+    }
+    IEnumerator AndarAleatorio(GameObject direcao)
+    {
+        yield return new WaitForSeconds(0.1f);
+        Moverparachaoperto(direcao); 
     }
 
 

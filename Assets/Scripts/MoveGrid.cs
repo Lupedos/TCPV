@@ -14,6 +14,7 @@ public class MoveGrid : MonoBehaviour
     Playercontrole controle;
 
     public static bool turno;//caso  turno  seja false  vez jogador  se nao  vez dos inimigos
+    public bool Apertou = false;
     void Awake()
     {
       turno = false;//vez do jogador 
@@ -87,22 +88,30 @@ public class MoveGrid : MonoBehaviour
             Vector3 position = new Vector3(Mathf.RoundToInt(chaoPerto.transform.position.x), 0.6f, Mathf.RoundToInt(chaoPerto.transform.position.z));
             transform.position = position;
             chaoPisando = chaoPerto;
-            StartCoroutine(TurnoTime());//timer para jogador ter açao  antes dos monstros;
+            turno = true;
+            Apertou = true; 
+            //StartCoroutine(TurnoTime());//timer para jogador ter açao  antes dos monstros;
             
         }
     }
     void Update()
     {
-        if(turno == true)
-        {
-           turno = false;
-        }
         chaoPertoD = null;
         chaoPertoE = null;
         chaoPertoB = null;
         chaoPertoC = null;
         encontrarChaoPerto(chaoPisando);
     }
+    void FixedUpdate()
+    {
+      if(turno == true && Apertou == true)
+      {
+         StartCoroutine(TurnoAcabou());
+         
+         Apertou = false;
+      }
+    }
+ 
     void D()
     {
       Moverparachaoperto(chaoPertoD);  
@@ -121,7 +130,15 @@ public class MoveGrid : MonoBehaviour
     }
     IEnumerator TurnoTime()
     {
-      yield return new WaitForSeconds(0.1f);
-      turno = true; 
+      
+      yield return new WaitForSeconds(0.03f);
+      turno = false;
+      
+    }
+    IEnumerator TurnoAcabou()
+    {
+      turno = true;
+      yield return new WaitForSeconds(0.000000000000000000000000000000000000000000002f);
+      turno = false;
     }
 }
