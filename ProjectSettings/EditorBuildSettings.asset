@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TelaInicial.unity
+    guid: 56001b8a1d034fa4ababb5729dcc14a5
+  - enabled: 1
+    path: "Assets/Scenes/Configura\xE7\xF5es.unity"
+    guid: 930629efa9671fc4c836ab2f490d6b39
+  - enabled: 1
+    path: Assets/Scenes/Martins.unity
+    guid: 25097dcbec548444ba2417f66b7abdbf
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: 4e00f887a6ca45043a1d512144556f72
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 56fce4c3752c16d429f7c8f6b4418d5a
   m_configObjects: {}
