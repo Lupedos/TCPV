@@ -1,0 +1,165 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AranhaScript : MonoBehaviour
+{
+    public GameObject chaoPertoD ;//Direita
+    public GameObject chaoPertoE ;//esquerda
+    public GameObject chaoPertoC ;//cima
+    public GameObject chaoPertoB ;//baixo
+    public GameObject chaoPisando;
+    
+    public int totalLinhas;
+    public int totalColunas;
+
+    public MoveGrid chaoAbelha;
+    public ControledeTurno controleDeTurno;
+
+    void Start()
+    {
+        
+        GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("chao");
+        chaoPisando = null;
+        float menorDistancia = Mathf.Infinity;
+        Vector3 posicaoAtual = transform.position;
+
+        foreach (GameObject chaoObject in chaoObjects)
+            {
+                float distancia = Vector3.Distance(chaoObject.transform.position, posicaoAtual);
+                if (distancia < menorDistancia)
+                {
+                    chaoPisando = chaoObject;
+                    menorDistancia = distancia;
+                }
+            }
+    }
+
+    
+    
+    private void encontrarChaoPerto(GameObject chao)
+    {                          
+        string nome = chao.name.Remove(0,4);//EX: Chao1-2  //Remove a partir de 0, 4 letras //EX: 1-2  
+        string[] posicao = nome.Split("-");//Split separa 1 do 2 //EX: posicao[0] = 1 e posicao[1] = 2
+
+        int linha = int.Parse(posicao[0]);//1
+        int coluna = int.Parse(posicao[1]);//2
+        int linhaMais = linha + 1;
+        int linhaMenos = linha - 1;
+        int colunaMais = coluna + 1;
+        int colunaMenos = coluna - 1;
+
+        string chaoPerto_C = "Chao" + (linhaMais).ToString() + "-" + coluna.ToString();//Somando valor da linha
+        string chaoPerto_B = "Chao" + (linhaMenos).ToString() + "-" + coluna.ToString();//Diminundo valor da linha
+        string chaoPerto_D = "Chao" + linha.ToString() + "-" + (colunaMais).ToString();//Somando valor da coluna
+        string chaoPerto_E = "Chao" + linha.ToString() + "-" + (colunaMenos).ToString();//Diminuindo valor da coluna
+
+        //busca novos objetos para Chao
+        chaoPertoC = GameObject.Find(chaoPerto_C);
+        chaoPertoB = GameObject.Find(chaoPerto_B);
+        chaoPertoD = GameObject.Find(chaoPerto_D);
+        chaoPertoE = GameObject.Find(chaoPerto_E);
+
+        //Debug.Log("B=" + chaoPerto_B);
+        //Debug.Log("C=" + chaoPerto_C);
+        //Debug.Log("D=" + chaoPerto_D);
+        //Debug.Log("E=" + chaoPerto_E);
+
+    }
+    private void Moverparachaoperto(GameObject chaoPerto)
+    {
+        if (chaoPerto != null)
+        {
+            Vector3 position = new Vector3(Mathf.RoundToInt(chaoPerto.transform.position.x), 0.6f, Mathf.RoundToInt(chaoPerto.transform.position.z));
+            transform.position = position;
+            chaoPisando = chaoPerto;            
+        }
+    }
+
+    void Update()
+    {
+        if(controleDeTurno.turnoAranha == true)
+        {
+            controleDeTurno.MovimentaAranha(false);
+            chaoPertoD = null;
+            chaoPertoE = null;
+            chaoPertoB = null;
+            chaoPertoC = null;
+            encontrarChaoPerto(chaoPisando);
+            encontrarJogador(chaoAbelha.chaoPisando);
+        }
+        
+    }
+
+    private void encontrarJogador(GameObject chao)
+    {
+        string nomeAB = chao.name.Remove(0,4);//EX: Chao1-2  //Remove a partir de 0, 4 letras //EX: 1-2  
+        string[] posicao = nomeAB.Split("-");//Split separa 1 do 2 //EX: posicao[0] = 1 e posicao[1] = 2
+
+        string nomeA = chaoPisando.name.Remove(0,4);//EX: Chao1-2  //Remove a partir de 0, 4 letras //EX: 1-2  
+        string[] posicao2 = nomeA.Split("-");//Split separa 1 do 2 //EX: posicao[0] = 1 e posicao[1] = 2
+
+        int linhaAB = int.Parse(posicao[0]);//1
+        int colunaAB = int.Parse(posicao[1]);//1
+
+        int linhaA = int.Parse(posicao2[0]);//1
+        int colunaA = int.Parse(posicao2[1]);//3
+
+        int linhatotal = linhaA - linhaAB;
+        int colunatotal = colunaA - colunaAB;
+         
+        
+        if( linhatotal >= colunatotal)
+        {
+            Debug.Log("Linhatotal: " + linhatotal + "Colunatotal: " + colunatotal);
+            if(linhaA == 1)
+            {
+                Moverparachaoperto(chaoPertoC);
+                Debug.Log("Cima");
+            }
+            else if(linhaA == totalLinhas)
+            {
+                Moverparachaoperto(chaoPertoB);
+                Debug.Log("Baixo");
+            }
+            else if(linhaA > linhaAB)
+            {
+                Moverparachaoperto(chaoPertoB);
+                Debug.Log("Baixo");
+            }
+            else if(linhaA < linhaAB)
+            {
+                Moverparachaoperto(chaoPertoC);
+                Debug.Log("Cima");
+            }
+
+        }
+        else if( linhatotal < colunatotal )
+        {
+            if(colunaA == 1)
+            {
+                Moverparachaoperto(chaoPertoD);
+                Debug.Log("Direita");
+            }
+            else if(colunaA == totalColunas)
+            {
+                Moverparachaoperto(chaoPertoE);
+                Debug.Log("Esquerda");
+            }
+            else if(colunaA > colunaAB)
+            {
+                Moverparachaoperto(chaoPertoE);
+                Debug.Log("Esquerda");
+            }
+            else if(colunaA < colunaAB)
+            {
+                Moverparachaoperto(chaoPertoD);
+                Debug.Log("DireitaS");
+            }
+
+        }
+
+
+    }
+
+}

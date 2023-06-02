@@ -15,6 +15,7 @@ public class MoveGrid : MonoBehaviour
 
     public static bool turno;//caso  turno  seja false  vez jogador  se nao  vez dos inimigos
     public bool Apertou = false;
+    public ControledeTurno controleDeTurno;
     void Awake()
     {
       turno = false;//vez do jogador 
@@ -31,6 +32,7 @@ public class MoveGrid : MonoBehaviour
     } 
      void Start()
     {
+      
         //Codigo  para encontrar  chao  mais proximo
        GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("chao");
        chaoPisando = null;
@@ -88,7 +90,7 @@ public class MoveGrid : MonoBehaviour
             Vector3 position = new Vector3(Mathf.RoundToInt(chaoPerto.transform.position.x), 0.6f, Mathf.RoundToInt(chaoPerto.transform.position.z));
             transform.position = position;
             chaoPisando = chaoPerto;
-            turno = true;
+            controleDeTurno.MovimentaTodos(true);
             Apertou = true; 
             //StartCoroutine(TurnoTime());//timer para jogador ter açao  antes dos monstros;
             
@@ -130,7 +132,6 @@ public class MoveGrid : MonoBehaviour
     }
     IEnumerator TurnoTime()
     {
-      
       yield return new WaitForSeconds(0.03f);
       turno = false;
       
