@@ -87,6 +87,8 @@ public class AranhaScript : MonoBehaviour
             chaoPertoC = null;
             encontrarChaoPerto(chaoPisando);
             encontrarJogador(chaoAbelha.chaoPisando);
+            if(chaoPisando == chaoAbelha.chaoPisando)
+                Destroy(gameObject);
         }
         
     }
@@ -105,61 +107,61 @@ public class AranhaScript : MonoBehaviour
         int linhaA = int.Parse(posicao2[0]);//1
         int colunaA = int.Parse(posicao2[1]);//3
 
-        int linhatotal = linhaA - linhaAB;
-        int colunatotal = colunaA - colunaAB;
+        int linhatotal = Mathf.Abs(linhaA - linhaAB);  //linhaA - linhaAB;
+        int colunatotal =  Mathf.Abs(colunaA - colunaAB);   //colunaA - colunaAB;
          
         
         if( linhatotal >= colunatotal)
         {
-            Debug.Log("Linhatotal: " + linhatotal + "Colunatotal: " + colunatotal);
-            if(linhaA == 1)
+            Debug.Log("Linhatotal: " + linhatotal + "Colunatotal: " + colunatotal + "linhaA: " + linhaA + "linhaAB: " + linhaAB);
+            if(linhaA == 1 && linhaA != linhaAB)
             {
+                Debug.Log("Cima-linhaA: " + linhaA + " linhaAB: " + linhaAB);
                 Moverparachaoperto(chaoPertoC);
-                Debug.Log("Cima");
             }
-            else if(linhaA == totalLinhas)
+            else if(linhaA == totalLinhas &&  linhaA != linhaAB)
             {
+                Debug.Log("Baixo-linhaA: " + linhaA + " linhaAB: " + linhaAB);
                 Moverparachaoperto(chaoPertoB);
-                Debug.Log("Baixo");
             }
             else if(linhaA > linhaAB)
             {
+                Debug.Log("Baixo2-linhaA: " + linhaA + " linhaAB: " + linhaAB);
                 Moverparachaoperto(chaoPertoB);
-                Debug.Log("Baixo");
             }
             else if(linhaA < linhaAB)
             {
+                Debug.Log("Cima2-linhaA: " + linhaA + " linhaAB: " + linhaAB);
                 Moverparachaoperto(chaoPertoC);
-                Debug.Log("Cima");
             }
-
         }
         else if( linhatotal < colunatotal )
         {
-            if(colunaA == 1)
+            Debug.Log("Linhatotal2: " + linhatotal + "Colunatotal2: " + colunatotal+ "colunaA: " + colunaA + "colunaAB: " + colunaAB);
+            if(colunaA == 1 && colunaA != colunaAB)
             {
+                Debug.Log("Direita-ColunaA: " + colunaA + " ColunaAB: " + colunaAB);
                 Moverparachaoperto(chaoPertoD);
-                Debug.Log("Direita");
             }
-            else if(colunaA == totalColunas)
+            else if(colunaA == totalColunas && colunaA != colunaAB)
             {
+                Debug.Log("Esquerda-ColunaA: " + colunaA + " ColunaAB: " + colunaAB);    
                 Moverparachaoperto(chaoPertoE);
-                Debug.Log("Esquerda");
             }
             else if(colunaA > colunaAB)
             {
+                Debug.Log("Esquerda2-ColunaA: " + colunaA + " ColunaAB: " + colunaAB);
                 Moverparachaoperto(chaoPertoE);
-                Debug.Log("Esquerda");
             }
             else if(colunaA < colunaAB)
             {
+                Debug.Log("Direita2-ColunaA: " + colunaA + " ColunaAB: " + colunaAB);
                 Moverparachaoperto(chaoPertoD);
-                Debug.Log("DireitaS");
             }
-
         }
 
 
     }
+   
 
 }
