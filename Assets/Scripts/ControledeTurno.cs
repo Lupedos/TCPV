@@ -5,18 +5,31 @@ using UnityEngine;
 public class ControledeTurno : MonoBehaviour
 {
     public bool turnoAranha;
-    public bool turnoFlor;
-    public bool turnoHumano;
+    public GameObject[] aranhas;
+    public int numTurnosAranhas;
 
+    public bool turnoHumano;
+    public GameObject[] humanos;
+    public int  numTurnosHumanos;
+
+
+    public bool turnoFlor;
+    public GameObject[] flores;
+    public int numturnos; 
     void Start()
     {
-        
+        flores = GameObject.FindGameObjectsWithTag("Flor");
+        numturnos = flores.Length;
+
+        aranhas = GameObject.FindGameObjectsWithTag("Aranha");
+        numTurnosAranhas = aranhas.Length;
     }
 
    
     void Update()
     {
-        
+        flores = GameObject.FindGameObjectsWithTag("Flor");
+        aranhas = GameObject.FindGameObjectsWithTag("Aranha");
     }
 
     public void MovimentaTodos(bool valor)
@@ -28,12 +41,24 @@ public class ControledeTurno : MonoBehaviour
 
     public void MovimentaAranha(bool valor)
     {
-        turnoAranha = valor;
+        numTurnosAranhas--;
+        if(numTurnosAranhas <= 0)
+        {
+            numTurnosAranhas = aranhas.Length;
+            turnoAranha = valor;
+        }
+        
     }
 
     public void MovimentaFlor(bool valor)
     {
-        turnoFlor = valor;
+        numturnos--; 
+        if(numturnos <= 0)
+        {
+            numturnos = flores.Length;
+            turnoFlor = valor;
+        }
+        
     }
 
     public void MovimentaHumano(bool valor)

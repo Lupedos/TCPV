@@ -15,11 +15,13 @@ public class MoverAleatorio : MonoBehaviour
 
     void Start()
     {
+        
+        controleDeTurno = GameObject.Find("ControleDeTurno").GetComponent<ControledeTurno>();
         //Codigo  para encontrar  chao  mais proximo
-       GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("chao");
-       chaoPisando = null;
-       float menorDistancia = Mathf.Infinity;
-       Vector3 posicaoAtual = transform.position;
+        GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("chao");
+        chaoPisando = null;
+        float menorDistancia = Mathf.Infinity;
+        Vector3 posicaoAtual = transform.position;
 
        foreach (GameObject chaoObject in chaoObjects)
         {

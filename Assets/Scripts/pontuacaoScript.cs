@@ -7,7 +7,7 @@ public class pontuacaoScript : MonoBehaviour
 {
     public int coleta;//pontuacao
     public GameObject vitoriaHud;
-    public  int numeroDeFlores;
+    public  int numeroDeFlores;//Pontuacao para ganhar jogo 
     void Start()
     {
         
@@ -26,9 +26,21 @@ public class pontuacaoScript : MonoBehaviour
     {
         if (other.tag == "Flor")
         {
-            Debug.Log("Pegou");
-            coleta++;
-            Destroy(other.gameObject);
+            FlorAnimacao flor = other.gameObject.GetComponent<FlorAnimacao>();
+            
+            if(flor.boa == true)
+            {
+                Debug.Log("Pegou boa");
+                coleta++;
+                Destroy(other.gameObject);
+            }
+            else if(flor.boa == false)
+            {
+                Debug.Log("Pegou ruim");
+                coleta--;
+                Destroy(other.gameObject);
+            }
+            
         }
     }
 }
