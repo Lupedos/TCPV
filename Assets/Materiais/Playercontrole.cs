@@ -62,6 +62,15 @@ public partial class @Playercontrole: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Polinizar"",
+                    ""type"": ""Button"",
+                    ""id"": ""fe3675f4-2103-499c-bc16-5a11358d3298"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -108,6 +117,17 @@ public partial class @Playercontrole: IInputActionCollection2, IDisposable
                     ""action"": ""Esquerda"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""afd49222-9f6a-4511-a55e-c17bfbcfcfdc"",
+                    ""path"": ""<SwitchProControllerHID>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Polinizar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -120,6 +140,7 @@ public partial class @Playercontrole: IInputActionCollection2, IDisposable
         m_Gameplay_Esquerda = m_Gameplay.FindAction("Esquerda", throwIfNotFound: true);
         m_Gameplay_Cima = m_Gameplay.FindAction("Cima", throwIfNotFound: true);
         m_Gameplay_Baixo = m_Gameplay.FindAction("Baixo", throwIfNotFound: true);
+        m_Gameplay_Polinizar = m_Gameplay.FindAction("Polinizar", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -185,6 +206,7 @@ public partial class @Playercontrole: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Esquerda;
     private readonly InputAction m_Gameplay_Cima;
     private readonly InputAction m_Gameplay_Baixo;
+    private readonly InputAction m_Gameplay_Polinizar;
     public struct GameplayActions
     {
         private @Playercontrole m_Wrapper;
@@ -193,6 +215,7 @@ public partial class @Playercontrole: IInputActionCollection2, IDisposable
         public InputAction @Esquerda => m_Wrapper.m_Gameplay_Esquerda;
         public InputAction @Cima => m_Wrapper.m_Gameplay_Cima;
         public InputAction @Baixo => m_Wrapper.m_Gameplay_Baixo;
+        public InputAction @Polinizar => m_Wrapper.m_Gameplay_Polinizar;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -214,6 +237,9 @@ public partial class @Playercontrole: IInputActionCollection2, IDisposable
             @Baixo.started += instance.OnBaixo;
             @Baixo.performed += instance.OnBaixo;
             @Baixo.canceled += instance.OnBaixo;
+            @Polinizar.started += instance.OnPolinizar;
+            @Polinizar.performed += instance.OnPolinizar;
+            @Polinizar.canceled += instance.OnPolinizar;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -230,6 +256,9 @@ public partial class @Playercontrole: IInputActionCollection2, IDisposable
             @Baixo.started -= instance.OnBaixo;
             @Baixo.performed -= instance.OnBaixo;
             @Baixo.canceled -= instance.OnBaixo;
+            @Polinizar.started -= instance.OnPolinizar;
+            @Polinizar.performed -= instance.OnPolinizar;
+            @Polinizar.canceled -= instance.OnPolinizar;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -253,5 +282,6 @@ public partial class @Playercontrole: IInputActionCollection2, IDisposable
         void OnEsquerda(InputAction.CallbackContext context);
         void OnCima(InputAction.CallbackContext context);
         void OnBaixo(InputAction.CallbackContext context);
+        void OnPolinizar(InputAction.CallbackContext context);
     }
 }

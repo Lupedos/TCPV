@@ -13,21 +13,17 @@ public class MoveGrid : MonoBehaviour
     
     Playercontrole controle;
 
-    public static bool turno;//caso  turno  seja false  vez jogador  se nao  vez dos inimigos
-    public bool Apertou = false;
     public ControledeTurno controleDeTurno;
     void Awake()
-    {
-      turno = false;//vez do jogador 
-      controle = new Playercontrole();
+    { 
+        controle = new Playercontrole();
 
-      if(turno == false)//faz com que  jogador  so  ande no  seu  turno 
-      {
+      
         controle.Gameplay.Direita.performed += ctx => D();//input direita
         controle.Gameplay.Esquerda.performed += ctx => E();//input esquerda
         controle.Gameplay.Cima.performed += ctx => C();//input cima
         controle.Gameplay.Baixo.performed += ctx => B();//input baixo
-      }
+      
       
     } 
      void Start()
@@ -91,7 +87,7 @@ public class MoveGrid : MonoBehaviour
             transform.position = position;
             chaoPisando = chaoPerto;
             controleDeTurno.MovimentaTodos(true);
-            Apertou = true; 
+             
             //StartCoroutine(TurnoTime());//timer para jogador ter açao  antes dos monstros;
             
         }
@@ -104,15 +100,7 @@ public class MoveGrid : MonoBehaviour
         chaoPertoC = null;
         encontrarChaoPerto(chaoPisando);
     }
-    void FixedUpdate()
-    {
-      if(turno == true && Apertou == true)
-      {
-         StartCoroutine(TurnoAcabou());
-         
-         Apertou = false;
-      }
-    }
+    
  
     void D()
     {
@@ -130,16 +118,5 @@ public class MoveGrid : MonoBehaviour
     {
       Moverparachaoperto(chaoPertoB); 
     }
-    IEnumerator TurnoTime()
-    {
-      yield return new WaitForSeconds(0.03f);
-      turno = false;
-      
-    }
-    IEnumerator TurnoAcabou()
-    {
-      turno = true;
-      yield return new WaitForSeconds(0.000000000000000000000000000000000000000000002f);
-      turno = false;
-    }
+    
 }
