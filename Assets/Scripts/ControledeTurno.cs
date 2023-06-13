@@ -23,6 +23,9 @@ public class ControledeTurno : MonoBehaviour
 
         aranhas = GameObject.FindGameObjectsWithTag("Aranha");
         numTurnosAranhas = aranhas.Length;
+
+        humanos = GameObject.FindGameObjectsWithTag("Humano");
+        numTurnosHumanos = humanos.Length;
     }
 
    
@@ -30,6 +33,7 @@ public class ControledeTurno : MonoBehaviour
     {
         flores = GameObject.FindGameObjectsWithTag("Flor");
         aranhas = GameObject.FindGameObjectsWithTag("Aranha");
+        humanos = GameObject.FindGameObjectsWithTag("Humano");
     }
 
     public void MovimentaTodos(bool valor)
@@ -63,6 +67,12 @@ public class ControledeTurno : MonoBehaviour
 
     public void MovimentaHumano(bool valor)
     {
-        turnoHumano = valor;
+        numTurnosHumanos--;
+        if(numTurnosHumanos <= 0)
+        {
+            numTurnosHumanos = humanos.Length;
+            turnoHumano = valor;
+        }
+        
     }
 }

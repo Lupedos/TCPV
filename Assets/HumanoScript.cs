@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AranhaScript : MonoBehaviour
+public class HumanoScript : MonoBehaviour
 {
     public GameObject chaoPertoD ;//Direita
     public GameObject chaoPertoE ;//esquerda
@@ -13,12 +13,14 @@ public class AranhaScript : MonoBehaviour
     public int totalLinhas;
     public int totalColunas;
 
-    public MoveGrid chaoAbelha;
+    public MoverAleatorio chaoFlor;
+    public FlorAnimacao status;
+    public GameObject florPerseguida;
     public ControledeTurno controleDeTurno;
 
     void Start()
     {
-        
+        ProximaFlor();
         GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("chao");
         chaoPisando = null;
         float menorDistancia = Mathf.Infinity;
@@ -35,7 +37,30 @@ public class AranhaScript : MonoBehaviour
             }
     }
 
-    
+    private void ProximaFlor()
+    {
+        GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("Flor");
+        float menorDistancia = Mathf.Infinity;
+        Vector3 posicaoAtual = transform.position;
+
+        foreach (GameObject chaoObject in chaoObjects)
+        {
+            float distancia = Vector3.Distance(chaoObject.transform.position, posicaoAtual);
+            status = chaoObject.GetComponent<FlorAnimacao>();
+            if (distancia < menorDistancia)
+            {
+                if(status.boa)
+                {
+                   florPerseguida = chaoObject;
+                   menorDistancia = distancia;
+                }
+                
+            }
+        }
+        chaoFlor = florPerseguida.GetComponent<MoverAleatorio>();
+        status = florPerseguida.GetComponent<FlorAnimacao>();
+
+    }
     
     private void encontrarChaoPerto(GameObject chao)
     {                          
@@ -78,22 +103,30 @@ public class AranhaScript : MonoBehaviour
 
     void Update()
     {
-        if(controleDeTurno.turnoAranha == true)
+        if(chaoPisando == chaoFlor.chaoPisando)
+            {
+             if(status.boa)
+             {
+                status.boa = false;
+                ProximaFlor();
+             }
+            }
+        if(controleDeTurno.turnoHumano == true)
         {
-            controleDeTurno.MovimentaAranha(false);
+            controleDeTurno.MovimentaHumano(false);
             chaoPertoD = null;
             chaoPertoE = null;
             chaoPertoB = null;
             chaoPertoC = null;
             encontrarChaoPerto(chaoPisando);
-            encontrarJogador(chaoAbelha.chaoPisando);
-            if(chaoPisando == chaoAbelha.chaoPisando)
-                Destroy(gameObject);
+            encontrarFlor(chaoFlor.chaoPisando);
+            
+                
         }
         
     }
 
-    private void encontrarJogador(GameObject chao)
+    private void encontrarFlor(GameObject chao)
     {
         string nomeAB = chao.name.Remove(0,4);//EX: Chao1-2  //Remove a partir de 0, 4 letras //EX: 1-2  
         string[] posicao = nomeAB.Split("-");//Split separa 1 do 2 //EX: posicao[0] = 1 e posicao[1] = 2
@@ -126,7 +159,7 @@ public class AranhaScript : MonoBehaviour
             }
             else if(linhaA > linhaAB)
             {
-                //Debug.Log("Baixo2-linhaA: " + linhaA + " linhaAB: " + linhaAB);
+               //Debug.Log("Baixo2-linhaA: " + linhaA + " linhaAB: " + linhaAB);
                 Moverparachaoperto(chaoPertoB);
             }
             else if(linhaA < linhaAB)
@@ -155,13 +188,11 @@ public class AranhaScript : MonoBehaviour
             }
             else if(colunaA < colunaAB)
             {
-               //Debug.Log("Direita2-ColunaA: " + colunaA + " ColunaAB: " + colunaAB);
+                //Debug.Log("Direita2-ColunaA: " + colunaA + " ColunaAB: " + colunaAB);
                 Moverparachaoperto(chaoPertoD);
             }
         }
 
 
     }
-   
-
 }

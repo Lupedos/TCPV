@@ -16,7 +16,10 @@ public class HabilidadePolinizar : MonoBehaviour
     }
     void Update()
     {
-        flores.Remove(null);
+        if(flores[0] == null)//melhorar dps 
+        {
+            flores.Remove(flores[0]);
+        }
     }
     void OnEnable()
     {
