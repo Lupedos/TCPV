@@ -14,15 +14,19 @@ public class MoveGrid : MonoBehaviour
     Playercontrole controle;
 
     public ControledeTurno controleDeTurno;
+    public ControleCartas controleCartas;
     void Awake()
     { 
         controle = new Playercontrole();
 
-      
-        controle.Gameplay.Direita.performed += ctx => D();//input direita
-        controle.Gameplay.Esquerda.performed += ctx => E();//input esquerda
-        controle.Gameplay.Cima.performed += ctx => C();//input cima
-        controle.Gameplay.Baixo.performed += ctx => B();//input baixo
+        if(controleCartas.tela == false )
+        {
+          controle.Gameplay.Direita.performed += ctx => D();//input direita
+          controle.Gameplay.Esquerda.performed += ctx => E();//input esquerda
+          controle.Gameplay.Cima.performed += ctx => C();//input cima
+          controle.Gameplay.Baixo.performed += ctx => B();//input baixo
+        }
+        
       
       
     } 

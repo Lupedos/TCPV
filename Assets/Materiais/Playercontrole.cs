@@ -128,6 +128,17 @@ public partial class @Playercontrole: IInputActionCollection2, IDisposable
                     ""action"": ""Polinizar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""926115d5-279f-4f2c-be37-f85fc8cb0d61"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Polinizar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
