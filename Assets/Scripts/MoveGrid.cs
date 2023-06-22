@@ -19,13 +19,12 @@ public class MoveGrid : MonoBehaviour
     { 
         controle = new Playercontrole();
 
-        if(controleCartas.tela == false )
-        {
+        
           controle.Gameplay.Direita.performed += ctx => D();//input direita
           controle.Gameplay.Esquerda.performed += ctx => E();//input esquerda
           controle.Gameplay.Cima.performed += ctx => C();//input cima
           controle.Gameplay.Baixo.performed += ctx => B();//input baixo
-        }
+        
         
       
       
@@ -91,6 +90,7 @@ public class MoveGrid : MonoBehaviour
             transform.position = position;
             chaoPisando = chaoPerto;
             controleDeTurno.MovimentaTodos(true);
+            controleCartas.andarCarta();
              
             //StartCoroutine(TurnoTime());//timer para jogador ter açao  antes dos monstros;
             
@@ -108,18 +108,22 @@ public class MoveGrid : MonoBehaviour
  
     void D()
     {
+      if(controleCartas.tela == false)
       Moverparachaoperto(chaoPertoD);  
     }
     void E()
     {
+      if(controleCartas.tela == false)
       Moverparachaoperto(chaoPertoE); 
     }
     void C()
     {
+      if(controleCartas.tela == false)
       Moverparachaoperto(chaoPertoC);  
     }
     void B()
     {
+      if(controleCartas.tela == false)
       Moverparachaoperto(chaoPertoB); 
     }
     

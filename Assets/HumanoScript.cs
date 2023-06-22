@@ -20,6 +20,7 @@ public class HumanoScript : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("iniciou");
         ProximaFlor();
         GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("chao");
         chaoPisando = null;
@@ -39,26 +40,33 @@ public class HumanoScript : MonoBehaviour
 
     private void ProximaFlor()
     {
-        GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("Flor");
-        float menorDistancia = Mathf.Infinity;
-        Vector3 posicaoAtual = transform.position;
+        GameObject[] florObjects = GameObject.FindGameObjectsWithTag("Flor");
+        Debug.Log("pegou florres" + florObjects);
+        //while(florObjects == null)
+        //{
+            Debug.Log("entrou no while");
+            florObjects = GameObject.FindGameObjectsWithTag("Flor");
+            float menorDistancia = Mathf.Infinity;
+            Vector3 posicaoAtual = transform.position;
 
-        foreach (GameObject chaoObject in chaoObjects)
-        {
-            float distancia = Vector3.Distance(chaoObject.transform.position, posicaoAtual);
-            status = chaoObject.GetComponent<FlorAnimacao>();
-            if (distancia < menorDistancia)
+            foreach (GameObject florObject in florObjects)
             {
-                if(status.boa)
+                float distancia = Vector3.Distance(florObject.transform.position, posicaoAtual);
+                status = florObject.GetComponent<FlorAnimacao>();
+                if (distancia < menorDistancia)
                 {
-                   florPerseguida = chaoObject;
-                   menorDistancia = distancia;
+                    if(status.boa)
+                    {
+                    florPerseguida = florObject;
+                    menorDistancia = distancia;
+                    }
+                    
                 }
-                
             }
-        }
-        chaoFlor = florPerseguida.GetComponent<MoverAleatorio>();
-        status = florPerseguida.GetComponent<FlorAnimacao>();
+            chaoFlor = florPerseguida.GetComponent<MoverAleatorio>();
+            status = florPerseguida.GetComponent<FlorAnimacao>();
+       //}
+        
 
     }
     
@@ -103,6 +111,7 @@ public class HumanoScript : MonoBehaviour
 
     void Update()
     {
+        
         if(chaoPisando == chaoFlor.chaoPisando)
             {
              if(status.boa)

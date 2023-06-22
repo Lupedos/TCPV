@@ -1268,7 +1268,7 @@ GameObject:
   - component: {fileID: 416754390}
   - component: {fileID: 416754389}
   m_Layer: 5
-  m_Name: 'Carta ruim 1 '
+  m_Name: Carta ruim  -1 Flor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2436,7 +2436,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &750614546
 GameObject:
@@ -3322,7 +3322,7 @@ Transform:
   m_Children:
   - {fileID: 1119207870}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &905301059
 MonoBehaviour:
@@ -3342,7 +3342,7 @@ MonoBehaviour:
   chaoPertoB: {fileID: 0}
   chaoPisando: {fileID: 0}
   controleDeTurno: {fileID: 1570519237}
-  controleCartas: {fileID: 0}
+  controleCartas: {fileID: 1570519239}
 --- !u!114 &905301060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5128,7 +5128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Vento forte  passou  perde  uma flor '
+  m_text: Uma flor boa curou uma flor doente
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6878,7 +6878,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1559484547}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1570519239}
+        m_TargetAssemblyTypeName: ControleCartas, Assembly-CSharp
+        m_MethodName: CartaCuraFlorboa
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1559484547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6969,7 +6981,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1570519239
 MonoBehaviour:
@@ -8162,7 +8174,7 @@ GameObject:
   - component: {fileID: 1905143187}
   - component: {fileID: 1905143186}
   m_Layer: 5
-  m_Name: Carta ruim 2
+  m_Name: CartaBoa Flor cura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8382,7 +8394,7 @@ Transform:
   - {fileID: 1144948837}
   - {fileID: 926205962}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1954244582
 GameObject:
@@ -9223,7 +9235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3660521058027738037, guid: 6233b4e2271508f4bbe89244827a29ce, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3660521058027738037, guid: 6233b4e2271508f4bbe89244827a29ce, type: 3}
       propertyPath: m_LocalPosition.x
