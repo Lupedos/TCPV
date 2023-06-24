@@ -20,7 +20,7 @@ public class HumanoScript : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("iniciou");
+        //Debug.Log("iniciou");
         ProximaFlor();
         GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("chao");
         chaoPisando = null;
@@ -41,10 +41,10 @@ public class HumanoScript : MonoBehaviour
     private void ProximaFlor()
     {
         GameObject[] florObjects = GameObject.FindGameObjectsWithTag("Flor");
-        Debug.Log("pegou florres" + florObjects);
+        //Debug.Log("pegou florres" + florObjects);
         //while(florObjects == null)
         //{
-            Debug.Log("entrou no while");
+            //Debug.Log("entrou no while");
             florObjects = GameObject.FindGameObjectsWithTag("Flor");
             float menorDistancia = Mathf.Infinity;
             Vector3 posicaoAtual = transform.position;

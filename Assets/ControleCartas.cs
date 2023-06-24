@@ -6,10 +6,13 @@ using TMPro;
 public class ControleCartas : MonoBehaviour
 {
     public GameObject jogador;
+    public GameObject prefabAranha;
     public int numAleatorioCartas;
     public int numAleatorioChanse;
     public  GameObject[] cartas;
     public bool tela = false;
+
+    
 
     public void andarCarta()//Codigo  que roda  toda vez jogador andar e escolhe  uma carta  aleatoria  entre todas as cartas que tiverem  no  array  cartas
     {
@@ -37,24 +40,40 @@ public class ControleCartas : MonoBehaviour
 
     }
     public void CartaCuraFlorboa()
-    {
+    { 
         GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("Flor");
-        GameObject florEscolhida = null;
-        FlorAnimacao status;
-        foreach (GameObject chaoObject in chaoObjects)
+        
+        if(chaoObjects != null)
         {
-            status = chaoObject.GetComponent<FlorAnimacao>();
-                if(status.boa == false)
-                {
-                   florEscolhida = chaoObject;
-                   
-                }
+            GameObject florEscolhida = null;
+            FlorAnimacao status;
+            foreach (GameObject chaoObject in chaoObjects)
+            {
+                status = chaoObject.GetComponent<FlorAnimacao>();
+                    if(status.boa == false)
+                    {
+                    florEscolhida = chaoObject;
+                    break;//quebra depois da primeira flor encontrada 
+                    }
 
+            }
+            if(florEscolhida != null)
+            {
+                status = florEscolhida.GetComponent<FlorAnimacao>();
+                status.boa = true;
+            }
+            
         }
-        status = florEscolhida.GetComponent<FlorAnimacao>();
-        status.boa = true;
         cartas[numAleatorioCartas].gameObject.SetActive(false);
         tela = false;
     }
+    public void CartaAranhaFaminta()
+    {
+        GameObject[] spaws = GameObject.FindGameObjectsWithTag("Spaw");
+        int num = Random.Range(0,spaws.Length);
 
+        Instantiate(prefabAranha, spaws[num].transform.position, spaws[num].transform.rotation);
+        cartas[numAleatorioCartas].gameObject.SetActive(false);
+        tela = false;
+    }
 }

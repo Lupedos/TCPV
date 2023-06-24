@@ -18,7 +18,11 @@ public class AranhaScript : MonoBehaviour
 
     void Start()
     {
-        
+        GameObject gameobjectAbelha = GameObject.FindGameObjectWithTag("Player");
+        chaoAbelha = gameobjectAbelha.GetComponent<MoveGrid>();
+        GameObject gameobjectControleturno = GameObject.Find("ControleDeTurno");
+        controleDeTurno = gameobjectControleturno.GetComponent<ControledeTurno>();
+
         GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("chao");
         chaoPisando = null;
         float menorDistancia = Mathf.Infinity;
