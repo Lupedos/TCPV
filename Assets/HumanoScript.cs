@@ -17,10 +17,14 @@ public class HumanoScript : MonoBehaviour
     public FlorAnimacao status;
     public GameObject florPerseguida;
     public ControledeTurno controleDeTurno;
+    public GameObject urso;
+    public bool ursoViVO;
+    public int num;
 
     void Start()
     {
         //Debug.Log("iniciou");
+        ursoViVO = false;
         ProximaFlor();
         GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("chao");
         chaoPisando = null;
@@ -38,13 +42,13 @@ public class HumanoScript : MonoBehaviour
             }
     }
 
-    private void ProximaFlor()
+    private void ProximaFlor()// tudo  fuciona  normal  so  da "erro" quando  nao  tem flor  mas so  para unity 
     {
         GameObject[] florObjects = GameObject.FindGameObjectsWithTag("Flor");
-        //Debug.Log("pegou florres" + florObjects);
-        //while(florObjects == null)
-        //{
-            //Debug.Log("entrou no while");
+        
+        if(florObjects != null)
+        {
+            Debug.Log("entrou no if FlorObjects do proximaFlor ");
             florObjects = GameObject.FindGameObjectsWithTag("Flor");
             float menorDistancia = Mathf.Infinity;
             Vector3 posicaoAtual = transform.position;
@@ -65,7 +69,7 @@ public class HumanoScript : MonoBehaviour
             }
             chaoFlor = florPerseguida.GetComponent<MoverAleatorio>();
             status = florPerseguida.GetComponent<FlorAnimacao>();
-       //}
+        }
         
 
     }
@@ -101,7 +105,7 @@ public class HumanoScript : MonoBehaviour
     }
     public void Moverparachaoperto(GameObject chaoPerto)
     {
-        if (chaoPerto != null)
+        if (chaoPerto != null && ursoViVO == false)
         {
             Vector3 position = new Vector3(Mathf.RoundToInt(chaoPerto.transform.position.x), 0.6f, Mathf.RoundToInt(chaoPerto.transform.position.z));
             transform.position = position;
@@ -112,7 +116,7 @@ public class HumanoScript : MonoBehaviour
     void Update()
     {
         
-        if(chaoPisando == chaoFlor.chaoPisando)
+        if(chaoPisando == chaoFlor.chaoPisando && ursoViVO == false)
             {
              if(status.boa)
              {
@@ -120,7 +124,11 @@ public class HumanoScript : MonoBehaviour
                 ProximaFlor();
              }
             }
-        if(controleDeTurno.turnoHumano == true)
+            else if(chaoFlor == null && ursoViVO == false)
+            {
+                ProximaFlor();
+            }
+        if(controleDeTurno.turnoHumano == true && ursoViVO == false )
         {
             controleDeTurno.MovimentaHumano(false);
             chaoPertoD = null;
@@ -129,8 +137,25 @@ public class HumanoScript : MonoBehaviour
             chaoPertoC = null;
             encontrarChaoPerto(chaoPisando);
             encontrarFlor(chaoFlor.chaoPisando);
-            
+        }
+       if(controleDeTurno.turnoHumano == true && ursoViVO == true)
+        {
+            controleDeTurno.MovimentaHumano(false);
+            num = Random.Range(0,2);
+            if(num == 1)
+            {
                 
+                ursoViVO = false; 
+            } 
+        }
+        if(ursoViVO)
+        {
+            urso.SetActive(true);
+            
+        }
+        else if(ursoViVO == false)
+        {
+            urso.SetActive(false);
         }
         
     }

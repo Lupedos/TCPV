@@ -7,7 +7,7 @@ public class ControleCartas : MonoBehaviour
 {
     public GameObject jogador;
     public GameObject prefabAranha;
-    
+    public GameObject prefabFlor;
 
     public int numAleatorioCartas;
     public int numAleatorioChanse;
@@ -41,7 +41,7 @@ public class ControleCartas : MonoBehaviour
         tela = false;//lembrar de ter isso todas as cartas
 
     }
-    public void CartaCuraFlorboa()
+    public void CartaCuraFlorboa()//Carta cura uma  flor  ruim e  tranforma em  boa 
     { 
         GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("Flor");
         
@@ -69,7 +69,7 @@ public class ControleCartas : MonoBehaviour
         cartas[numAleatorioCartas].gameObject.SetActive(false);
         tela = false;
     }
-     public void CartaContaminaFlor()
+    public void CartaContaminaFlor()//Carta  contamina uma  flor  boa  e deixa ela  ruim 
     { 
         GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("Flor");
         
@@ -97,7 +97,7 @@ public class ControleCartas : MonoBehaviour
         cartas[numAleatorioCartas].gameObject.SetActive(false);
         tela = false;
     }
-    public void CartaAranhaFaminta()
+    public void CartaAranhaFaminta()// spawna uma  aranha 
     {
         GameObject[] spaws = GameObject.FindGameObjectsWithTag("Spaw");
         int num = Random.Range(0,spaws.Length);
@@ -200,17 +200,40 @@ public class ControleCartas : MonoBehaviour
         cartas[numAleatorioCartas].gameObject.SetActive(false);
         tela = false;
     }
-    public void CartaChuva()
+    public void CartaChuva()// faz  jogador nao  mover um  turno (obs tem que apertar andar para mover)
     {
         MoveGrid script = jogador.GetComponent<MoveGrid>();
         script.chuva = true;
         cartas[numAleatorioCartas].gameObject.SetActive(false);
         tela = false;
     }
-    public  void CartaEnegia()
+    public void CartaEnegia()// faz jogador poder andar duas vezes num turno
     {
         MoveGrid script = jogador.GetComponent<MoveGrid>();
         script.energia = true;
+        cartas[numAleatorioCartas].gameObject.SetActive(false);
+        tela = false;
+    }
+    public void CartaSol()// faz nascer novas flores
+    {
+        GameObject[] spaws = GameObject.FindGameObjectsWithTag("chao");
+        int rand = Random.Range(1,5);
+        for(int i=0; i < rand; i++)
+        {
+            int num = Random.Range(0,spaws.Length);
+            Instantiate(prefabFlor, spaws[num].transform.position, spaws[num].transform.rotation);
+        }
+        cartas[numAleatorioCartas].gameObject.SetActive(false);
+        tela = false;
+    } 
+    public void CartaUrso()// ativa urso  de todos  os humanos 
+    {
+        GameObject[] humanos = GameObject.FindGameObjectsWithTag("Humano");
+        foreach(GameObject todosHumano in humanos)
+        {
+            HumanoScript script = todosHumano.GetComponent<HumanoScript>();
+            script.ursoViVO = true; 
+        }
         cartas[numAleatorioCartas].gameObject.SetActive(false);
         tela = false;
     }
