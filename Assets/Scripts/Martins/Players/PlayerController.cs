@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +18,22 @@ public class PlayerController : MonoBehaviour
 
     public GameObject menuPanel;
     private bool isMenuOpen = false;
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("aa"))
+        {
+            SceneManager.LoadScene("Gameplay");
+        }
+    }
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.CompareTag("aa"))
+    //     {
+    //         SceneManager.LoadScene("Gameplay");
+    //     }
+    // }
 
     // Start is called before the first frame update
     void Start()
@@ -76,6 +93,8 @@ public class PlayerController : MonoBehaviour
                 fliparPerson.flipX = false;
             }
         }
+
+
     }
 }
 
