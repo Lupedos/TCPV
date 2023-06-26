@@ -15,15 +15,17 @@ public class MoveGrid : MonoBehaviour
 
     public ControledeTurno controleDeTurno;
     public ControleCartas controleCartas;
+    public bool chuva = false;
+    public bool energia = false;
     void Awake()
     { 
         controle = new Playercontrole();
 
         
-          controle.Gameplay.Direita.performed += ctx => D();//input direita
-          controle.Gameplay.Esquerda.performed += ctx => E();//input esquerda
-          controle.Gameplay.Cima.performed += ctx => C();//input cima
-          controle.Gameplay.Baixo.performed += ctx => B();//input baixo
+        controle.Gameplay.Direita.performed += ctx => D();//input direita
+        controle.Gameplay.Esquerda.performed += ctx => E();//input esquerda
+        controle.Gameplay.Cima.performed += ctx => C();//input cima
+        controle.Gameplay.Baixo.performed += ctx => B();//input baixo
         
         
       
@@ -84,16 +86,23 @@ public class MoveGrid : MonoBehaviour
     // Move o personagem para a posição do objeto mais próximo
     private void Moverparachaoperto(GameObject chaoPerto)
     {
-        if (chaoPerto != null)
+        if (chaoPerto != null && chuva == false)
         {
             Vector3 position = new Vector3(Mathf.RoundToInt(chaoPerto.transform.position.x), 0.6f, Mathf.RoundToInt(chaoPerto.transform.position.z));
             transform.position = position;
             chaoPisando = chaoPerto;
-            controleDeTurno.MovimentaTodos(true);
-            controleCartas.andarCarta();
-             
-            //StartCoroutine(TurnoTime());//timer para jogador ter açao  antes dos monstros;
-            
+            if(energia == false)
+            {
+              controleDeTurno.MovimentaTodos(true);
+              controleCartas.andarCarta();
+            }
+            energia = false;
+            //StartCoroutine(TurnoTime());//timer para jogador ter açao  antes dos monstros; 
+        }
+        else if (chuva == true)
+        {
+          controleDeTurno.MovimentaTodos(true);
+          chuva = false;
         }
     }
  public void TornadoMove(GameObject chaoPerto)

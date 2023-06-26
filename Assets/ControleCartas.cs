@@ -69,7 +69,6 @@ public class ControleCartas : MonoBehaviour
         cartas[numAleatorioCartas].gameObject.SetActive(false);
         tela = false;
     }
-
      public void CartaContaminaFlor()
     { 
         GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("Flor");
@@ -198,6 +197,20 @@ public class ControleCartas : MonoBehaviour
             }
 
 
+        cartas[numAleatorioCartas].gameObject.SetActive(false);
+        tela = false;
+    }
+    public void CartaChuva()
+    {
+        MoveGrid script = jogador.GetComponent<MoveGrid>();
+        script.chuva = true;
+        cartas[numAleatorioCartas].gameObject.SetActive(false);
+        tela = false;
+    }
+    public  void CartaEnegia()
+    {
+        MoveGrid script = jogador.GetComponent<MoveGrid>();
+        script.energia = true;
         cartas[numAleatorioCartas].gameObject.SetActive(false);
         tela = false;
     }
