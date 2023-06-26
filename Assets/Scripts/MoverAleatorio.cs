@@ -77,7 +77,7 @@ public class MoverAleatorio : MonoBehaviour
     }
 
 
-    private void Moverparachaoperto(GameObject chaoPerto)
+    public void Moverparachaoperto(GameObject chaoPerto)
     {
         if (chaoPerto != null)
         {

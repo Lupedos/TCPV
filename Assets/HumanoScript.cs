@@ -99,7 +99,7 @@ public class HumanoScript : MonoBehaviour
         //Debug.Log("E=" + chaoPerto_E);
 
     }
-    private void Moverparachaoperto(GameObject chaoPerto)
+    public void Moverparachaoperto(GameObject chaoPerto)
     {
         if (chaoPerto != null)
         {

@@ -96,6 +96,16 @@ public class MoveGrid : MonoBehaviour
             
         }
     }
+ public void TornadoMove(GameObject chaoPerto)
+    {
+        if (chaoPerto != null)
+        {
+            Vector3 position = new Vector3(Mathf.RoundToInt(chaoPerto.transform.position.x), 0.6f, Mathf.RoundToInt(chaoPerto.transform.position.z));
+            transform.position = position;
+            chaoPisando = chaoPerto;
+        }
+    }
+
     void Update()
     {
         chaoPertoD = null;
