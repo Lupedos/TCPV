@@ -19,7 +19,7 @@ public class pontuacaoScript : MonoBehaviour
         if(coleta == numeroDeFlores)
         {
             vitoriaHud.gameObject.SetActive(true);
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
     }
     public void OnTriggerEnter(Collider other)

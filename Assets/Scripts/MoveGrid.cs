@@ -128,6 +128,10 @@ public class MoveGrid : MonoBehaviour
         {
           anim.SetTrigger("Chuvendo");
         }
+        else
+        {
+          anim.SetTrigger("parado");
+        }
     }
     
  

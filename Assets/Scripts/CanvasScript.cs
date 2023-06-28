@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class CanvasScript : MonoBehaviour
@@ -48,4 +49,17 @@ public class CanvasScript : MonoBehaviour
         Time.timeScale = 0;
         //Debug.Log("perdeu");
     }
+    public void repetir()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+    public void telaPrincipal()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void Continuar()
+    {
+        SceneManager.LoadScene(2);
+    }
+
 }
