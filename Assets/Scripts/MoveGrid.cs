@@ -17,6 +17,7 @@ public class MoveGrid : MonoBehaviour
     public ControleCartas controleCartas;
     public bool chuva = false;
     public bool energia = false;
+    private Animator anim;
     void Awake()
     { 
         controle = new Playercontrole();
@@ -26,13 +27,14 @@ public class MoveGrid : MonoBehaviour
         controle.Gameplay.Esquerda.performed += ctx => E();//input esquerda
         controle.Gameplay.Cima.performed += ctx => C();//input cima
         controle.Gameplay.Baixo.performed += ctx => B();//input baixo
-        
+        controle.Gameplay.Polinizar.performed += ctx => animPolinizarFlores();//input A butao da  direita 
         
       
       
     } 
      void Start()
     {
+      anim = GetComponent<Animator>();
       
         //Codigo  para encontrar  chao  mais proximo
        GameObject[] chaoObjects = GameObject.FindGameObjectsWithTag("chao");
@@ -122,6 +124,10 @@ public class MoveGrid : MonoBehaviour
         chaoPertoB = null;
         chaoPertoC = null;
         encontrarChaoPerto(chaoPisando);
+        if(chuva == true)
+        {
+          anim.SetTrigger("Chuvendo");
+        }
     }
     
  
@@ -144,6 +150,10 @@ public class MoveGrid : MonoBehaviour
     {
       if(controleCartas.tela == false)
       Moverparachaoperto(chaoPertoB); 
+    }
+    void animPolinizarFlores()
+    {
+      anim.SetTrigger("polinalizando");
     }
     
 }
