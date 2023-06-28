@@ -1,0 +1,303 @@
+fileFormatVersion: 2
+guid: 93a9819026152ca42972d4dec4b5ce42
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "homem dos agronegociosANIMA\xC7AO-Sheet_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 513
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb392d6bbdf28204aaa664da1023e4d8
+      internalID: 607710550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "homem dos agronegociosANIMA\xC7AO-Sheet_1"
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 18
+        width: 435
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72881243fd6973241a1290a7cc9ef227
+      internalID: -1086719683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "homem dos agronegociosANIMA\xC7AO-Sheet_2"
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 20
+        width: 485
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca41f17f24146544eb20dab5c78598b2
+      internalID: -879794684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "homem dos agronegociosANIMA\xC7AO-Sheet_4"
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 18
+        width: 520
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fded2fc292d2ebc489514199f793dfef
+      internalID: -2101297059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "homem dos agronegociosANIMA\xC7AO-Sheet_6"
+      rect:
+        serializedVersion: 2
+        x: 2657
+        y: 18
+        width: 551
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b039e1c68e4bb43a2dcdfec50fb89b
+      internalID: 507116314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "homem dos agronegociosANIMA\xC7AO-Sheet_8"
+      rect:
+        serializedVersion: 2
+        x: 3297
+        y: 18
+        width: 543
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db718257666ae7946ac257443147a066
+      internalID: -570430014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5627f9cb05c96c548a1babc00fdb1377
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "homem dos agronegociosANIMA\xC7AO-Sheet_0": 607710550
+      "homem dos agronegociosANIMA\xC7AO-Sheet_1": -1086719683
+      "homem dos agronegociosANIMA\xC7AO-Sheet_10": 189169934
+      "homem dos agronegociosANIMA\xC7AO-Sheet_11": -71441998
+      "homem dos agronegociosANIMA\xC7AO-Sheet_12": 712686264
+      "homem dos agronegociosANIMA\xC7AO-Sheet_13": 571763294
+      "homem dos agronegociosANIMA\xC7AO-Sheet_14": -1358426924
+      "homem dos agronegociosANIMA\xC7AO-Sheet_15": -124530967
+      "homem dos agronegociosANIMA\xC7AO-Sheet_16": -135045893
+      "homem dos agronegociosANIMA\xC7AO-Sheet_17": -384813309
+      "homem dos agronegociosANIMA\xC7AO-Sheet_18": -1261582876
+      "homem dos agronegociosANIMA\xC7AO-Sheet_19": 1095654958
+      "homem dos agronegociosANIMA\xC7AO-Sheet_2": -879794684
+      "homem dos agronegociosANIMA\xC7AO-Sheet_20": -2133089732
+      "homem dos agronegociosANIMA\xC7AO-Sheet_21": 551294951
+      "homem dos agronegociosANIMA\xC7AO-Sheet_22": -159753488
+      "homem dos agronegociosANIMA\xC7AO-Sheet_23": -2026084604
+      "homem dos agronegociosANIMA\xC7AO-Sheet_24": -2043433442
+      "homem dos agronegociosANIMA\xC7AO-Sheet_25": -1234976313
+      "homem dos agronegociosANIMA\xC7AO-Sheet_26": -766740687
+      "homem dos agronegociosANIMA\xC7AO-Sheet_27": 1942252622
+      "homem dos agronegociosANIMA\xC7AO-Sheet_28": 1464396976
+      "homem dos agronegociosANIMA\xC7AO-Sheet_29": -23484216
+      "homem dos agronegociosANIMA\xC7AO-Sheet_3": 215071771
+      "homem dos agronegociosANIMA\xC7AO-Sheet_4": -2101297059
+      "homem dos agronegociosANIMA\xC7AO-Sheet_5": -1733287365
+      "homem dos agronegociosANIMA\xC7AO-Sheet_6": 507116314
+      "homem dos agronegociosANIMA\xC7AO-Sheet_7": -1271664717
+      "homem dos agronegociosANIMA\xC7AO-Sheet_8": -570430014
+      "homem dos agronegociosANIMA\xC7AO-Sheet_9": -382121986
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
