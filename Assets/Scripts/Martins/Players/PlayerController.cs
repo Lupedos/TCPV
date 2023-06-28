@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody rig;
     public float moveSpeed, jumpForce;
-
+    public Animator anim;
     private Vector2 moveInput;
 
     public LayerMask whaitIsGround;
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = GetComponent<Animator>(); 
     }
 
     // Update is called once per frame
@@ -98,9 +98,21 @@ public class PlayerController : MonoBehaviour
             moveInput.x = Input.GetAxis("Horizontal");
             moveInput.y = Input.GetAxis("Vertical");
             moveInput.Normalize();
+            
+            
 
             // Move o jogador
             rig.velocity = new Vector3(moveInput.x * moveSpeed, rig.velocity.y, moveInput.y * moveSpeed);
+
+            //animator
+            if(moveInput.x != 0 || moveInput.y != 0)
+            {
+                anim.SetBool("movendo" , true); 
+            }
+            else
+            {
+                anim.SetBool("movendo" , false); 
+            }
 
             // Verifica se o jogador está no chão
             RaycastHit hit;
