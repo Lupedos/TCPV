@@ -9,6 +9,7 @@ public class HumanoScript : MonoBehaviour
     public GameObject chaoPertoC ;//cima
     public GameObject chaoPertoB ;//baixo
     public GameObject chaoPisando;
+    private Animator anim;
     
     public int totalLinhas;
     public int totalColunas;
@@ -23,6 +24,7 @@ public class HumanoScript : MonoBehaviour
 
     void Start()
     {
+         anim = GetComponent<Animator>();
         //Debug.Log("iniciou");
         ursoViVO = false;
         ProximaFlor();
@@ -107,7 +109,7 @@ public class HumanoScript : MonoBehaviour
     {
         if (chaoPerto != null && ursoViVO == false)
         {
-            Vector3 position = new Vector3(Mathf.RoundToInt(chaoPerto.transform.position.x), 0.6f, Mathf.RoundToInt(chaoPerto.transform.position.z));
+            Vector3 position = new Vector3(Mathf.RoundToInt(chaoPerto.transform.position.x), 1f, Mathf.RoundToInt(chaoPerto.transform.position.z));
             transform.position = position;
             chaoPisando = chaoPerto;            
         }
@@ -122,6 +124,7 @@ public class HumanoScript : MonoBehaviour
              {
                 status.boa = false;
                 ProximaFlor();
+                anim.SetTrigger("Tocou");
              }
             }
             else if(chaoFlor == null && ursoViVO == false)
