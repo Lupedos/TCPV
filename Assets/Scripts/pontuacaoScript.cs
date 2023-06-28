@@ -24,7 +24,7 @@ public class pontuacaoScript : MonoBehaviour
             vitoriaHud.gameObject.SetActive(true);
             //Time.timeScale = 0;
         }
-        hudPontuacao.text = numeroDeFlores.ToString();
+        hudPontuacao.text = coleta.ToString();
     }
     public void OnTriggerEnter(Collider other)
     {
