@@ -1,0 +1,339 @@
+fileFormatVersion: 2
+guid: 33542c6e35ec9504aa8c10f584dafe46
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3oFlorBoaMurchando_0"
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 546
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92728b874f170fc4a84e4dae4b150131
+      internalID: 859316879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3oFlorBoaMurchando_12"
+      rect:
+        serializedVersion: 2
+        x: 1948
+        y: 0
+        width: 628
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa9f9db3f293104984b7980b0a352f9
+      internalID: 857659330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3oFlorBoaMurchando_13"
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 0
+        width: 544
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e08af96bc8caa8499a88ca88d78e66a
+      internalID: -736432386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3oFlorBoaMurchando_14"
+      rect:
+        serializedVersion: 2
+        x: 3278
+        y: 0
+        width: 505
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2e4ecbd334bb541a0f95eabb7532d0
+      internalID: 2136079781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3oFlorBoaMurchando_16"
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64df5efe0c0ba54f9ff5eacd060e876
+      internalID: -2037819527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3oFlorBoaMurchando_39"
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 0
+        width: 661
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a1756e4da05ea48857d801cc0abed2
+      internalID: -1223839467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9bd38ba793d1b9c47bced229529d2dcd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Anima\xE7\xE3oFlorBoaMurchando_0": 859316879
+      "Anima\xE7\xE3oFlorBoaMurchando_1": -1260507499
+      "Anima\xE7\xE3oFlorBoaMurchando_10": -318484557
+      "Anima\xE7\xE3oFlorBoaMurchando_11": -1465145111
+      "Anima\xE7\xE3oFlorBoaMurchando_12": 857659330
+      "Anima\xE7\xE3oFlorBoaMurchando_13": -736432386
+      "Anima\xE7\xE3oFlorBoaMurchando_14": 2136079781
+      "Anima\xE7\xE3oFlorBoaMurchando_15": 233571990
+      "Anima\xE7\xE3oFlorBoaMurchando_16": -2037819527
+      "Anima\xE7\xE3oFlorBoaMurchando_17": -1880207394
+      "Anima\xE7\xE3oFlorBoaMurchando_18": -2013731291
+      "Anima\xE7\xE3oFlorBoaMurchando_19": -1623967550
+      "Anima\xE7\xE3oFlorBoaMurchando_2": -772859612
+      "Anima\xE7\xE3oFlorBoaMurchando_20": 1170280490
+      "Anima\xE7\xE3oFlorBoaMurchando_21": 922582424
+      "Anima\xE7\xE3oFlorBoaMurchando_22": 487395200
+      "Anima\xE7\xE3oFlorBoaMurchando_23": 2006045416
+      "Anima\xE7\xE3oFlorBoaMurchando_24": -1496457660
+      "Anima\xE7\xE3oFlorBoaMurchando_25": -1407729811
+      "Anima\xE7\xE3oFlorBoaMurchando_26": -123074708
+      "Anima\xE7\xE3oFlorBoaMurchando_27": -885050909
+      "Anima\xE7\xE3oFlorBoaMurchando_28": -1429900318
+      "Anima\xE7\xE3oFlorBoaMurchando_29": -739777866
+      "Anima\xE7\xE3oFlorBoaMurchando_3": 1057622924
+      "Anima\xE7\xE3oFlorBoaMurchando_30": -1233075068
+      "Anima\xE7\xE3oFlorBoaMurchando_31": -1790083371
+      "Anima\xE7\xE3oFlorBoaMurchando_32": 141396147
+      "Anima\xE7\xE3oFlorBoaMurchando_33": 1966070516
+      "Anima\xE7\xE3oFlorBoaMurchando_34": -949537263
+      "Anima\xE7\xE3oFlorBoaMurchando_35": -1668318937
+      "Anima\xE7\xE3oFlorBoaMurchando_36": 390834819
+      "Anima\xE7\xE3oFlorBoaMurchando_37": -1679122810
+      "Anima\xE7\xE3oFlorBoaMurchando_38": -1639791177
+      "Anima\xE7\xE3oFlorBoaMurchando_39": -1223839467
+      "Anima\xE7\xE3oFlorBoaMurchando_4": -1588617768
+      "Anima\xE7\xE3oFlorBoaMurchando_40": -1295499261
+      "Anima\xE7\xE3oFlorBoaMurchando_41": -721665474
+      "Anima\xE7\xE3oFlorBoaMurchando_42": -968627448
+      "Anima\xE7\xE3oFlorBoaMurchando_43": 249644006
+      "Anima\xE7\xE3oFlorBoaMurchando_44": 1078233981
+      "Anima\xE7\xE3oFlorBoaMurchando_45": 39891198
+      "Anima\xE7\xE3oFlorBoaMurchando_46": -1270215487
+      "Anima\xE7\xE3oFlorBoaMurchando_47": -1346419170
+      "Anima\xE7\xE3oFlorBoaMurchando_48": 2051635866
+      "Anima\xE7\xE3oFlorBoaMurchando_49": 609457600
+      "Anima\xE7\xE3oFlorBoaMurchando_5": 1604984779
+      "Anima\xE7\xE3oFlorBoaMurchando_50": -760617417
+      "Anima\xE7\xE3oFlorBoaMurchando_51": 1265012960
+      "Anima\xE7\xE3oFlorBoaMurchando_52": -1766679496
+      "Anima\xE7\xE3oFlorBoaMurchando_53": 2096462671
+      "Anima\xE7\xE3oFlorBoaMurchando_54": -1158678981
+      "Anima\xE7\xE3oFlorBoaMurchando_55": -1424286909
+      "Anima\xE7\xE3oFlorBoaMurchando_56": 377682603
+      "Anima\xE7\xE3oFlorBoaMurchando_57": -362536047
+      "Anima\xE7\xE3oFlorBoaMurchando_58": -610248215
+      "Anima\xE7\xE3oFlorBoaMurchando_59": -1271039403
+      "Anima\xE7\xE3oFlorBoaMurchando_6": 1838310924
+      "Anima\xE7\xE3oFlorBoaMurchando_60": -1491586204
+      "Anima\xE7\xE3oFlorBoaMurchando_61": -282069183
+      "Anima\xE7\xE3oFlorBoaMurchando_62": 1989078406
+      "Anima\xE7\xE3oFlorBoaMurchando_63": 597936254
+      "Anima\xE7\xE3oFlorBoaMurchando_64": -24638206
+      "Anima\xE7\xE3oFlorBoaMurchando_65": -1045471134
+      "Anima\xE7\xE3oFlorBoaMurchando_7": -629939849
+      "Anima\xE7\xE3oFlorBoaMurchando_8": -867645033
+      "Anima\xE7\xE3oFlorBoaMurchando_9": 1150854520
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

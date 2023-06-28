@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f92f947199c50254eba2a36e170d6c33
+guid: 7b45bfc26733c864cad71ae4bdbecad8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,11 +33,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprplaceholder_animacao_0
+      name: "Anima\xE7\xE3oFlorRuimFlorescendo_0"
       rect:
         serializedVersion: 2
-        x: 40
-        y: 30
-        width: 260
-        height: 240
+        x: 58
+        y: 0
+        width: 495
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4c93cbe27fa9ec42b098bdf7ed7d0f8
-      internalID: 1034438638
+      spriteID: 2d0ba9072490f234585b613527c0fbf2
+      internalID: 789416219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprplaceholder_animacao_1
+      name: "Anima\xE7\xE3oFlorRuimFlorescendo_1"
       rect:
         serializedVersion: 2
-        x: 360
-        y: 30
-        width: 260
-        height: 240
+        x: 696
+        y: 0
+        width: 498
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4718a2744056bc94f86f400fd80984d8
-      internalID: -32234450
+      spriteID: 3d04b4701820a9d438f7225bb45f3a31
+      internalID: 476384338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprplaceholder_animacao_2
+      name: "Anima\xE7\xE3oFlorRuimFlorescendo_2"
       rect:
         serializedVersion: 2
-        x: 680
-        y: 30
-        width: 260
-        height: 240
+        x: 1337
+        y: 0
+        width: 526
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58e7962f992c74f408fbfd0da5eb3e2a
-      internalID: -1284395198
+      spriteID: 4bf9751fadede7144818f4d28b79a83e
+      internalID: -1693580222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprplaceholder_animacao_3
+      name: "Anima\xE7\xE3oFlorRuimFlorescendo_3"
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 30
-        width: 260
-        height: 240
+        x: 1976
+        y: 0
+        width: 548
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +206,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2da9764552e2e4f479c515e98ef35231
-      internalID: -839174228
+      spriteID: 2c72f73cf8105bb41b53835ec64ae0b2
+      internalID: -898880372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3oFlorRuimFlorescendo_4"
+      rect:
+        serializedVersion: 2
+        x: 2617
+        y: 0
+        width: 546
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c8e49ebb5802b42894305ce0c79b52
+      internalID: 2032941601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3oFlorRuimFlorescendo_5"
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 0
+        width: 565
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b556a9d6464c1479971ebbdedd360e
+      internalID: -1196588155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3oFlorRuimFlorescendo_6"
+      rect:
+        serializedVersion: 2
+        x: 3886
+        y: 0
+        width: 568
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc8727c9b3ca3d4a9121ea0ae4ab92c
+      internalID: -241578436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3oFlorRuimFlorescendo_7"
+      rect:
+        serializedVersion: 2
+        x: 4538
+        y: 0
+        width: 546
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2db2b86d62a0c478b34c33f5d78022
+      internalID: -100527922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Anima\xE7\xE3oFlorRuimFlorescendo_17"
+      rect:
+        serializedVersion: 2
+        x: 5176
+        y: 0
+        width: 546
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60caf07074026714381618d5a8ef5826
+      internalID: 2072495988
       vertices: []
       indices: 
       edges: []
@@ -215,7 +320,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6d99c957cefafd84b869bc23d055455e
+    spriteID: d5266236629147b4fb424876c153ca4d
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +328,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprplaceholder_animacao_0: 1034438638
-      Sprplaceholder_animacao_1: -32234450
-      Sprplaceholder_animacao_2: -1284395198
-      Sprplaceholder_animacao_3: -839174228
+      "Anima\xE7\xE3oFlorRuimFlorescendo_0": 789416219
+      "Anima\xE7\xE3oFlorRuimFlorescendo_1": 476384338
+      "Anima\xE7\xE3oFlorRuimFlorescendo_10": -149616587
+      "Anima\xE7\xE3oFlorRuimFlorescendo_11": 357288647
+      "Anima\xE7\xE3oFlorRuimFlorescendo_12": 11230020
+      "Anima\xE7\xE3oFlorRuimFlorescendo_13": -1032303611
+      "Anima\xE7\xE3oFlorRuimFlorescendo_14": -11762999
+      "Anima\xE7\xE3oFlorRuimFlorescendo_15": -473659687
+      "Anima\xE7\xE3oFlorRuimFlorescendo_16": 2096989034
+      "Anima\xE7\xE3oFlorRuimFlorescendo_17": 2072495988
+      "Anima\xE7\xE3oFlorRuimFlorescendo_2": -1693580222
+      "Anima\xE7\xE3oFlorRuimFlorescendo_3": -898880372
+      "Anima\xE7\xE3oFlorRuimFlorescendo_4": 2032941601
+      "Anima\xE7\xE3oFlorRuimFlorescendo_5": -1196588155
+      "Anima\xE7\xE3oFlorRuimFlorescendo_6": -241578436
+      "Anima\xE7\xE3oFlorRuimFlorescendo_7": -100527922
+      "Anima\xE7\xE3oFlorRuimFlorescendo_8": -1518859370
+      "Anima\xE7\xE3oFlorRuimFlorescendo_9": -367599014
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
