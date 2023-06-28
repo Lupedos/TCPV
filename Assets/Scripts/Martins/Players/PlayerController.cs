@@ -88,6 +88,7 @@ public class PlayerController : MonoBehaviour
             // Ativa ou desativa o painel do menu
             menuPanel.SetActive(isMenuOpen);
 
+
             // Pausa ou retoma o jogo (desabilita ou habilita o script de controle do jogador)
             enabled = !isMenuOpen;
         }
