@@ -11,6 +11,10 @@ TagManager:
   - Spaw
   - Nuvem
   - aa
+  - tartaruga
+  - macaco
+  - sagui
+  - papagaio
   layers:
   - Default
   - TransparentFX
