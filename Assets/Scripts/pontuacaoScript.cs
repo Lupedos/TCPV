@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class pontuacaoScript : MonoBehaviour
 {
     public int coleta;//pontuacao
     public GameObject vitoriaHud;
-    public  int numeroDeFlores;//Pontuacao para ganhar jogo 
+    public int numeroDeFlores;//Pontuacao para ganhar jogo
+    public TextMeshProUGUI hudPontuacao;
+     
     void Start()
     {
         
@@ -21,6 +24,7 @@ public class pontuacaoScript : MonoBehaviour
             vitoriaHud.gameObject.SetActive(true);
             //Time.timeScale = 0;
         }
+        hudPontuacao.text = numeroDeFlores.ToString();
     }
     public void OnTriggerEnter(Collider other)
     {
